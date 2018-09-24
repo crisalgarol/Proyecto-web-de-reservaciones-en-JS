@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Inicio</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="css/reservaciones.css">
+ <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+
+
+<div id="navBar" class="navBar">
+		<a href="reservaciones.html" class="celda botonLink">Inicio</a>
+		<a href="reservaciones.html" class="celda botonLink">Quiénes somos</a>
+		<a href="reservaciones.html" class="celda botonLink">Nuestro menú</a>
+		<a href="reservaciones.html" class="celda botonLink">Reservaciones</a>
+		<a href="reservaciones.html" class="celda botonLink">Contacto</a>
+</div> 
+
+	
+<div class="elementosEvento">
+			<div>
+				<div class="celda">
+			    	<label for="name" >Tipo de evento</label>
+					<select id='evento' class="seleccionar">
+						<option value="1">Bautizo</option>   
+						<option value="2">Boda</option>   
+						<option value="3">Graduación</option>  
+						<option value="4">Reunión de negocios</option>   			 
+						<option value="5">Reunión familiar</option>   
+						<option value="6">XV años</option> 
+					</select>
+				</div>
+
+				<div class="celda">
+					<label for="name">Evento guardado</label>
+					<select id='eventoGuardado' class="seleccionar" >
+						<option value="0">Selecciona un elemento</option>
+					</select>
+				</div>
+			    
+			    <div class="celda">
+					<label for="name">Fecha del Evento</label>
+					<input type="date" name="fecha" id="fecha" class="seleccionar" requiered>
+				</div>	
+
+				<button type="button" id="reservar" class="botonVerde celda">Reservar</button>
+
+			    </div>
+
+			
+
+						
+						
+					
+	
+</div>
+
+
+<div id="contenedor" class="contenedor">
+	
+
+	<div class="dragAndDrop">
+
+		<div class="dragBar" id="dragBar" ondragstart="dragStart(event)" drag="drag(event)">
+			<img src="imagenes/mesa.png" class="mesa" id="mesa1">
+			<img src="imagenes/mesa.png" class="mesa" id="mesa2">
+			<img src="imagenes/mesa.png" class="mesa" id="mesa3">
+			<img src="imagenes/banda.png" class="banda" id="banda">
+			<img src="imagenes/pista.gif" class="pista" id="pista">
+			<img src="imagenes/bocina.png" class="bocina" id="bocina1">
+			<img src="imagenes/bocina.png" class="bocina" id="bocina2">
+			<img src="imagenes/mesero.png" class="mesero" id="mesero1">
+			<img src="imagenes/mesero.png" class="mesero" id="mesero2">
+
+		</div>
+
+		
+		<div class="dropSpace" id="dropSpace" ondragover="permitirDrop(event)" ondrop="drop(event)">
+
+			<table >
+				<tr>
+					<td id = "m11" class="cell" ondragover="permitirDrop(event)" ondrop="drop(event)" ondragstart="dragStart(event)" drag="drag(event)"></td>
+					<td id = "m12" class="cell" ondragover="permitirDrop(event)" ondrop="drop(event)" ondragstart="dragStart(event)" drag="drag(event)"></td>
+					<td id = "m13" class="cell" ondragover="permitirDrop(event)" ondrop="drop(event)" ondragstart="dragStart(event)" drag="drag(event)"></td>
+				</tr>
+
+				<tr>
+					<td id = "m21" class="cell" ondragover="permitirDrop(event)" ondrop="drop(event)" ondragstart="dragStart(event)" drag="drag(event)"></td>
+					<td id = "m22" class="cell" ondragover="permitirDrop(event)" ondrop="drop(event)" ondragstart="dragStart(event)" drag="drag(event)"></td>
+					<td id = "m23"class="cell" ondragover="permitirDrop(event)" ondrop="drop(event)" ondragstart="dragStart(event)" drag="drag(event)"></td>
+				</tr>
+
+				<tr>
+					<td id = "m31" class="cell" ondragover="permitirDrop(event)" ondrop="drop(event)" ondragstart="dragStart(event)" drag="drag(event)"></td>
+					<td id = "m32" class="cell" ondragover="permitirDrop(event)" ondrop="drop(event)" ondragstart="dragStart(event)" drag="drag(event)"></td>
+					<td id = "m33" class="cell" ondragover="permitirDrop(event)" ondrop="drop(event)" ondragstart="dragStart(event)" drag="drag(event)"></td>
+				</tr>
+
+			</table>
+
+		</div>
+	</div>
+
+</div>
+
+
+<!-- Modal Mesa Uno -->
+<div class="modal fade fondoVerdeTransparente" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog fond" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Mesa uno</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      	<form>
+      	  <div class="form-group">
+      	  	<label class="form-group text-primary">Platillo</label>
+						<select id='platilloM1'>
+						<option value="1">Filete Mignon con salsa Bernesa</option>
+						<option value="2">Filete Stroganoff</option>
+						<option value="3">Pasta con Ragu Confit de Pato</option>
+						<option value="4">Pato al Oporto</option>	
+						<option value="5">Pollo al pistache</option>	
+						<option value="6">Rataotuille</option>
+						</select>			
+      	</div>
+		  <div class="form-group"><input type="text" name="" class="form-control" placeholder="Invitado uno" id="m1i1" requiered></div>
+	      <div class="form-group"><input type="text" name="" class="form-control" placeholder="Invitado dos" id="m1i2" required></div>
+	      <div class="form-group"><input type="text" name="" class="form-control" placeholder="Invitado tres" id="m1i3" requiered></div>
+	      <div class="form-group"><input type="text" name="" class="form-control" placeholder="Invitado cuatro" id="m1i4" requiered></div>
+	      <div class="form-group"><input type="text" name="" class="form-control" placeholder="Invitado cinco" id="m1i5" requiered></div>
+	      <div class="form-group"><input type="text" name="" class="form-control" placeholder="Invitado seis" id="m1i6" requiered></div>
+	      <div class="form-group"><input type="text" name="" class="form-control" placeholder="Invitado siete" id="m1i7" requiered></div>
+	      <div class="form-group"><input type="text" name="" class="form-control" placeholder="Invitado ocho" id="m1i8" requiered></div>
+
+	      <button type="button" class="botonVerde" data-dismiss="modal" aria-label="Close">Aceptar</button>
+
+		</form>
+	  </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Mesa Dos -->
+<div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Mesa dos</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      	<form>
+      	  <div class="form-group">
+      	  	<label class="form-group text-primary">Platillo</label>
+						<select id='platilloM2'>
+						<option value="1">Filete Mignon con salsa Bernesa</option>
+						<option value="2">Filete Stroganoff</option>
+						<option value="3">Pasta con Ragu Confit de Pato</option>
+						<option value="4">Pato al Oporto</option>	
+						<option value="5">Pollo al pistache</option>	
+						<option value="6">Rataotuille</option>
+						</select>			
+      	</div>
+		  <div class="form-group"><input type="text" name="" class="form-control" placeholder="Invitado uno" id="m2i1" requiered></div>
+	      <div class="form-group"><input type="text" name="" class="form-control" placeholder="Invitado dos" id="m2i2" requiered></div>
+	      <div class="form-group"><input type="text" name="" class="form-control" placeholder="Invitado tres" id="m2i3" requiered></div>
+	      <div class="form-group"><input type="text" name="" class="form-control" placeholder="Invitado cuatro" id="m2i4" requiered></div>
+	      <div class="form-group"><input type="text" name="" class="form-control" placeholder="Invitado cinco" id="m2i5" requiered></div>
+	      <div class="form-group"><input type="text" name="" class="form-control" placeholder="Invitado seis" id="m2i6" requiered></div>
+	      <div class="form-group"><input type="text" name="" class="form-control" placeholder="Invitado siete" id="m2i7" requiered></div>
+	      <div class="form-group"><input type="text" name="" class="form-control" placeholder="Invitado ocho" id="m2i8" requiered></div>
+
+	      <button type="button" class="botonVerde" data-dismiss="modal" aria-label="Close">Aceptar</button>
+
+		</form>
+	  </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Mesa Tres -->
+<div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Mesa tres</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      	<form>
+      	  <div class="form-group">
+      	  	<label class="form-group text-primary">Platillo</label>
+						<select id='platilloM3'>
+						<option value="1">Filete Mignon con salsa Bernesa</option>
+						<option value="2">Filete Stroganoff</option>
+						<option value="3">Pasta con Ragu Confit de Pato</option>
+						<option value="4">Pato al Oporto</option>	
+						<option value="5">Pollo al pistache</option>	
+						<option value="6">Rataotuille</option>
+						</select>			
+      	</div>
+		  <div class="form-group"><input type="text" name="" class="form-control" placeholder="Invitado uno" id="m3i1" requiered></div>
+	      <div class="form-group"><input type="text" name="" class="form-control" placeholder="Invitado dos" id="m3i2" requiered></div>
+	      <div class="form-group"><input type="text" name="" class="form-control" placeholder="Invitado tres" id="m3i3" requiered></div>
+	      <div class="form-group"><input type="text" name="" class="form-control" placeholder="Invitado cuatro" id="m3i4" requiered></div>
+	      <div class="form-group"><input type="text" name="" class="form-control" placeholder="Invitado cinco" id="m3i5" requiered></div>
+	      <div class="form-group"><input type="text" name="" class="form-control" placeholder="Invitado seis" id="m3i6" requiered></div>
+	      <div class="form-group"><input type="text" name="" class="form-control" placeholder="Invitado siete" id="m3i7" requiered></div>
+	      <div class="form-group"><input type="text" name="" class="form-control" placeholder="Invitado ocho" id="m3i8" requiered></div>
+	 
+        	<button type="button" class="botonVerde" data-dismiss="modal" aria-label="Close">Aceptar</button>
+
+		</form>
+	  </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="jquery/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="JS/reservaciones.js"></script>
+    
+
+</body>
+</html>
